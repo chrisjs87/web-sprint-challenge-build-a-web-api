@@ -13,7 +13,7 @@ server.use(express.json())
 // Do NOT `server.listen()` inside this file!
 
 server.use('/api/projects', projectsRouter)
-server.use('/api/projects', actionsRouter)
+server.use('/api/actions', actionsRouter)
 
 server.get('/', (req, res) => {
   res.send(`<h1>Sprint Challenge API</h1>`)

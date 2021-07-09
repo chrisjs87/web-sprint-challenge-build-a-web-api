@@ -4,20 +4,32 @@ const express = require('express')
 
 const Projects = require('./projects-model')
 
-// const { } = require('./projects-middleware')
+const { validateProjectId, validateProjectBody } = require('./projects-middleware')
 
 const router = express.Router()
 
-router.get('/api/projects', (req, res) => {})
+router.get('/', (req, res) => {
+  Projects.get()
+    .then(projects => {
+      res.status(200).json(projects)
+    })
+})
 
-router.get('/api/projects/:id', (req, res) => {})
+router.get('/:id', validateProjectId, (req, res) => {
+  res.status(200).json(req.project)
+})
 
-router.post('/api/projects', (req, res) => {})
+router.post('/', validateProjectBody, (req, res) => {
+  Projects.insert(req.body)
+    .then(project => {
+      res.status(201).json(project)
+    })
+})
 
-router.put('/api/projects/:id', (req, res) => {})
+router.put('/:id', (req, res) => {})
 
-router.delete('/api/projects/:id', (req, res) => {})
+router.delete('/:id', (req, res) => {})
 
-router.get('/api/projects/:id/actions', (req, res) => {})
+router.get('/:id/actions', (req, res) => {})
 
 module.exports = router

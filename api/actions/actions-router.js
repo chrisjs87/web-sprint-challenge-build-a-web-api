@@ -8,14 +8,14 @@ const Actions = require('./actions-model')
 
 const router = express.Router()
 
-router.get('/api/actions', (req, res) => {})
+router.get('/', (req, res) => {})
 
-router.get('/api/actions/:id', (req, res) => {})
+router.get('/:id', (req, res) => {})
 
-router.post('/api/actions', (req, res) => {})
+router.post('/', (req, res) => {})
 
-router.put('/api/actions/:id', (req, res) => {})
+router.put('/:id', (req, res) => {})
 
-router.delete('/api/actions/:id', (req, res) => {})
+router.delete('/:id', (req, res) => {})
 
 module.exports = router
