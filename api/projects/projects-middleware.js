@@ -27,7 +27,19 @@ function validateProjectBody(req, res, next) {
   }
 }
 
+function validateProjectCompleted(req, res, next) {
+  const { completed } = req.params
+  if ( completed === undefined ) {
+    res.status(400).json({ message: "Request body is missing the completed field"} )
+  } else {
+    req.completed = completed
+    console.log("should move to update table")
+    next()
+  }
+}
+
 module.exports = {
   validateProjectId,
   validateProjectBody,
+  validateProjectCompleted,
 }
