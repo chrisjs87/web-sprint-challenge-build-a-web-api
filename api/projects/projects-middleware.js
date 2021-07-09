@@ -28,8 +28,8 @@ function validateProjectBody(req, res, next) {
 }
 
 function validateProjectCompleted(req, res, next) {
-  const { completed } = req.params
-  if ( completed === undefined ) {
+  const { completed } = req.body
+  if (completed === undefined) {
     res.status(400).json({ message: "Request body is missing the completed field"} )
   } else {
     req.completed = completed
