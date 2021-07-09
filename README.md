@@ -36,16 +36,16 @@ Your finished project must include all of the following requirements:
 
 #### NPM Scripts
 
-A _"test"_ script already exists you can use to run tests against your code.
+A _"test"_ script already exists you can use to run tests against your code.                         //removed --watchAll from test script in case unreliable test issues arise
 A _"resetdb"_ script exists that allows you to reset the database to its original state.
 
-- [ ] Write an _npm script_ named _"start"_ that uses `node` to run the API server.
-- [ ] Write an _npm script_ named _"server"_ that uses `nodemon` to run the API server.
-- [ ] Install _nodemon_ as a development dependency that would not be used in production.
+- [COMPLETE] Write an _npm script_ named _"start"_ that uses `node` to run the API server.
+- [COMPLETE] Write an _npm script_ named _"server"_ that uses `nodemon` to run the API server.
+- [COMPLETE] Install _nodemon_ as a development dependency that would not be used in production. //accidentally first installed in as a standard dependency, removed it in the package.json manually, and moved it to the devDependencies manually
 
 #### Environment Variables
 
-- [ ] Bring the port number from the `process.env` variable, falling back to `5000` if `process.env.PORT` is undefined.
+- [COMPLETE] Bring the port number from the `process.env` variable, falling back to `5000` if `process.env.PORT` is undefined.
 
 #### Endpoints
 
@@ -146,11 +146,11 @@ We have provided test data for all the resources.
 
 ## Submission format
 
-- [ ] Submit via Codegrade by pushing commits to your `<firstName-lastName>` branch on Github.
-- [ ] Create a pull-request to merge `<firstName-lastName>` branch into main.
-- [ ] Check Codegrade for automated feedback.
-- [ ] Check Codegrade on Monday following the Sprint Challenge for reviewer feedback.
-- [ ] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
+- [COMPLETE] Submit via Codegrade by pushing commits to your `<firstName-lastName>` branch on Github.
+- [COMPLETE] Create a pull-request to merge `<firstName-lastName>` branch into main.
+- [COMPLETE] Check Codegrade for automated feedback.
+- [COMPLETE] Check Codegrade on Monday following the Sprint Challenge for reviewer feedback.
+- [COMPLETE] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
 
 ## Interview Questions
 
