@@ -27,15 +27,6 @@ router.post('/', validateProjectBody, (req, res) => {
 })
 
 router.put('/:id', validateProjectId, validateProjectBody, validateProjectCompleted, (req, res) => {
-  // if (req.body.completed) {
-  //   Projects.update(req.params.id, req.body)
-  //     .then(project => {
-  //       res.json(project)
-  //     })
-  // } else {
-  //   res.status(400).json({ message: "Request body is missing the completed field"} )
-  // }
-  console.log("about to update")
   Projects.update(req.params.id, req.body)
     .then(project => {
       res.json(project)
