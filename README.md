@@ -18,17 +18,17 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 ### Task 1: Project Set Up
 
-- [ ] Fork and clone this repository. **If you are repeating this Course, delete your old fork from Github and re-fork and re-clone.**
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Implement the project on your newly created branch, committing changes regularly.
-- [ ] Push commits: `git push origin <firstName-lastName>`.
-- [ ] **RUN** `npm install` to install your dependencies.
+- [COMPLETE] Fork and clone this repository. **If you are repeating this Course, delete your old fork from Github and re-fork and re-clone.**
+- [COMPLETE] Create a new branch: `git checkout -b <firstName-lastName>`.
+- [COMPLETE] Implement the project on your newly created branch, committing changes regularly.
+- [COMPLETE] Push commits: `git push origin <firstName-lastName>`.
+- [COMPLETE] **RUN** `npm install` to install your dependencies.
 
 ### Task 2: CodeGrade Setup
 
-- [ ] Follow [instructions](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374) to set up Codegrade's Webhook and Deploy Key, making sure your deployment is set to your `<firstName-lastName>` branch.
-- [ ] Make a commit and push it to Github.
-- [ ] Check to see that Codegrade has accepted your git submission.
+- [COMPLETE] Follow [instructions](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374) to set up Codegrade's Webhook and Deploy Key, making sure your deployment is set to your `<firstName-lastName>` branch.
+- [COMPLETE] Make a commit and push it to Github.
+- [COMPLETE] Check to see that Codegrade has accepted your git submission.
 
 ### Task 3: Project Requirements (MVP)
 
@@ -36,63 +36,63 @@ Your finished project must include all of the following requirements:
 
 #### NPM Scripts
 
-A _"test"_ script already exists you can use to run tests against your code.
+A _"test"_ script already exists you can use to run tests against your code.                         //removed --watchAll from test script in case unreliable test issues arise
 A _"resetdb"_ script exists that allows you to reset the database to its original state.
 
-- [ ] Write an _npm script_ named _"start"_ that uses `node` to run the API server.
-- [ ] Write an _npm script_ named _"server"_ that uses `nodemon` to run the API server.
-- [ ] Install _nodemon_ as a development dependency that would not be used in production.
+- [COMPLETE] Write an _npm script_ named _"start"_ that uses `node` to run the API server.
+- [COMPLETE] Write an _npm script_ named _"server"_ that uses `nodemon` to run the API server.
+- [COMPLETE] Install _nodemon_ as a development dependency that would not be used in production. //accidentally first installed in as a standard dependency, removed it in the package.json manually, and moved it to the devDependencies manually
 
 #### Environment Variables
 
-- [ ] Bring the port number from the `process.env` variable, falling back to `5000` if `process.env.PORT` is undefined.
+- [COMPLETE] Bring the port number from the `process.env` variable, falling back to `5000` if `process.env.PORT` is undefined.
 
 #### Endpoints
 
 Inside `api/projects/projects-router.js` build the following endpoints:
 
-- [ ] `[GET] /api/projects`
+- [COMPLETE] `[GET] /api/projects`
   - Returns an array of projects as the body of the response.
   - If there are no projects it responds with an empty array.
-- [ ] `[GET] /api/projects/:id`
+- [COMPLETE] `[GET] /api/projects/:id`
   - Returns a project with the given `id` as the body of the response.
   - If there is no project with the given `id` it responds with a status code 404.
-- [ ] `[POST] /api/projects`
+- [COMPLETE] `[POST] /api/projects`
   - Returns the newly created project as the body of the response.
   - If the request body is missing any of the required fields it responds with a status code 400.
-- [ ] `[PUT] /api/projects/:id`
+- [COMPLETE] `[PUT] /api/projects/:id`
   - Returns the updated project as the body of the response.
   - If there is no project with the given `id` it responds with a status code 404.
   - If the request body is missing any of the required fields it responds with a status code 400.
-- [ ] `[DELETE] /api/projects/:id`
+- [COMPLETE] `[DELETE] /api/projects/:id`
   - Returns no response body.
   - If there is no project with the given `id` it responds with a status code 404.
-- [ ] `[GET] /api/projects/:id/actions`
+- [COMPLETE] `[GET] /api/projects/:id/actions`
   - Returns an array of actions (could be empty) belonging to a project with the given `id`.
   - If there is no project with the given `id` it responds with a status code 404.
 
 Inside `api/actions/actions-router.js` build endpoints for performing CRUD operations on _actions_:
 
-- [ ] `[GET] /api/actions`
+- [COMPLETE] `[GET] /api/actions`
   - Returns an array of actions (or an empty array) as the body of the response.
-- [ ] `[GET] /api/actions/:id`
+- [COMPLETE] `[GET] /api/actions/:id`
   - Returns an action with the given `id` as the body of the response.
   - If there is no action with the given `id` it responds with a status code 404.
-- [ ] `[POST] /api/actions`
+- [COMPLETE] `[POST] /api/actions`
   - Returns the newly created action as the body of the response.
   - If the request body is missing any of the required fields it responds with a status code 400.
   - When adding an action make sure the `project_id` provided belongs to an existing `project`.
-- [ ] `[PUT] /api/actions/:id`
+- [COMPLETE] `[PUT] /api/actions/:id`
   - Returns the updated action as the body of the response.
   - If there is no action with the given `id` it responds with a status code 404.
   - If the request body is missing any of the required fields it responds with a status code 400.
-- [ ] `[DELETE] /api/actions/:id`
+- [COMPLETE] `[DELETE] /api/actions/:id`
   - Returns no response body.
   - If there is no action with the given `id` it responds with a status code 404.
 
 #### Middleware functions
 
-- [ ] Write at least two middleware functions for this API, and consume them in the proper places of your code.
+- [COMPLETE] Write at least two middleware functions for this API, and consume them in the proper places of your code.
 
 ### Database Schemas
 
@@ -146,11 +146,11 @@ We have provided test data for all the resources.
 
 ## Submission format
 
-- [ ] Submit via Codegrade by pushing commits to your `<firstName-lastName>` branch on Github.
-- [ ] Create a pull-request to merge `<firstName-lastName>` branch into main.
-- [ ] Check Codegrade for automated feedback.
-- [ ] Check Codegrade on Monday following the Sprint Challenge for reviewer feedback.
-- [ ] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
+- [COMPLETE] Submit via Codegrade by pushing commits to your `<firstName-lastName>` branch on Github.
+- [COMPLETE] Create a pull-request to merge `<firstName-lastName>` branch into main.
+- [COMPLETE] Check Codegrade for automated feedback.
+- [COMPLETE] Check Codegrade on Monday following the Sprint Challenge for reviewer feedback.
+- [COMPLETE] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
 
 ## Interview Questions
 
